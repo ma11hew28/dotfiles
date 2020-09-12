@@ -1,0 +1,25 @@
+[user]
+	name = Your Full Name
+	email = your.email@example.com
+[alias]
+	ad = add --update
+	br = branch
+	co = checkout
+	dc = diff --ignore-all-space --find-renames --cached
+	df = diff
+	dh = diff --ignore-all-space --find-renames HEAD
+	dw = diff --ignore-all-space --find-renames --color-words
+	gr = log -13 --all --oneline --graph
+	lf = log --format=fuller
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbi = rebase --interactive
+	re = remote
+	st = status
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+[mergetool]
+	keepBackup = false
+[rerere]
+	enabled = true
+[diff]
+	colorMoved = dimmed-zebra

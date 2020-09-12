@@ -5,9 +5,9 @@ Inspired by [dotfiles][1]
 ## Installation
 
 - Clone this project to `~/dotfiles`, or wherever
-- Optional: Create a file named `bash_profile_private.bash` for your private commands
-- Copy `gitconfig.example` to `gitconfig` and add your name & email
-- In Terminal, run the command `cd ~/dotfiles && bash init.bash ~/dotfiles`
+- Optional: Create a file named `zshrc_private` for your private commands
+- Change name and email in `gitconfig`
+- In Terminal run the command `zsh init.zsh /path/to/dotfiles`
 - Restart Terminal
 
 
