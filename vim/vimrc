@@ -3,6 +3,7 @@ packadd! matchit
 syntax enable
 
 set autoread
+set autoindent
 set backspace=indent,eol,start
 set backupcopy=yes              " preserves file creation time on macOS
 set display=lastline
@@ -14,10 +15,10 @@ set ignorecase
 set laststatus=2
 set linebreak
 set nrformats-=octal
-set number
 set scrolloff=2
 set shiftwidth=2
 set smartcase
+set smartindent
 set softtabstop=2
 set splitright
 set ttimeout
@@ -29,10 +30,12 @@ let g:netrw_liststyle = 3
 let g:netrw_preview = 1
 let g:netrw_winsize = 30
 
-if executable('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp')
+if executable('sourcekit-lsp')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'sourcekit-lsp',
-    \ 'cmd': {server_info->['/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp']},
-    \ 'whitelist': ['swift'],
+    \ 'cmd': {server_info->['sourcekit-lsp']},
+    \ 'allowlist': ['swift'],
     \ })
 endif
+
+command Date r !node -p '(new Date()).toISOString()'

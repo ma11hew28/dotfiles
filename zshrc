@@ -10,6 +10,7 @@ alias cp='cp -i'
 alias fr='fgrep --exclude .DS_Store --exclude "*.swp" --exclude-dir .git --exclude-dir node_modules --recursive'
 alias gr='grep --exclude-dir .git --exclude-dir node_modules --recursive'
 alias json='pbpaste | python -m json.tool'
+alias lf='ls -1G'
 alias mv='mv -i'
 alias nt='vim -c "r !date" -c "cd ~/notes" -c "normal Go" +startinsert ~/notes/notes-`date +'%Y-%m-%d-%H-%M-%S-%Z'`.txt'
 
