@@ -1,14 +1,15 @@
 # dotfiles
 
-Inspired by [dotfiles][1]
+Inspired by [dotfiles][1].
 
 ## Installation
 
-- Clone this project to `~/dotfiles`, or wherever
-- Change name and email in `gitconfig`
-- Optional: Create a file named `zshrc_private` for your private commands
-- In Terminal run the command `cd ~ && zsh init.zsh relative/path/to/dotfiles`
-- Restart Terminal
+1. Clone this project to `~/dotfiles`, or wherever.
+2. Change the values of `name` and `email` in `config/git/config`.
+3. Optional: Create a file named `zshrc_private` for your private commands.
+4. Back up all your files because the next step may overwrite some of them.
+5. In Terminal, run the command `./init.zsh relative/path/from/~/to/dotfiles`.
+6. Restart Terminal.
 
 
 Released under the [Unlicense][1].
