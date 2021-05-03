@@ -3,13 +3,14 @@
 	email = liveloveprosper@gmail.com
 [alias]
 	ad = add --update
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	br = branch
 	co = checkout
-	dc = diff --ignore-all-space --find-renames --cached
+	dc = diff --cached
 	dcsv = diff --color-words="[^[:space:],]+"
 	df = diff
-	dh = diff --ignore-all-space --find-renames HEAD
-	dw = diff --find-renames --color-words=.
+	dh = diff HEAD
+	dw = diff --color-words=.
 	gr = log -13 --all --oneline --graph
 	lf = log --format=fuller
 	rba = rebase --abort
@@ -17,7 +18,6 @@
 	rbi = rebase --interactive
 	re = remote
 	st = status
-	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 [mergetool]
 	keepBackup = false
 [rerere]
