@@ -3,14 +3,19 @@
 	email = liveloveprosper@gmail.com
 [alias]
 	ad = add --update
-	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	alias = !git help -a | sed '1,/aliases$/d'
 	br = branch
 	co = checkout
+	cr = clone --recurse-submodules
 	dc = diff --cached
-	dcsv = diff --color-words="[^[:space:],]+"
+	dcm = diff -U0 --color-moved
+	dcsv = diff -U0 --color-words="[^[:space:],]+"
+	dd = diff -U0 --color-words=.
 	df = diff
 	dh = diff HEAD
-	dw = diff --color-words=.
+	du = diff -U0
+	dw = diff -U0 --color-words
+	dwc = diff -U0 --color-words --cached
 	gr = log -13 --all --oneline --graph
 	lf = log --format=fuller
 	rba = rebase --abort
@@ -22,3 +27,5 @@
 	keepBackup = false
 [rerere]
 	enabled = true
+[init]
+	defaultBranch = main

@@ -1,11 +1,21 @@
+# Cloudflare Wrangler
+.wrangler
+
 # Finder
 .DS_Store
 
 # npm
 node_modules
 
+# Rust: Cargo
+/target
+
+# Swift Package Manager
+.build
+
 # Xcode
 xcuserdata
 
 # Vim
+*.spl
 *.swp

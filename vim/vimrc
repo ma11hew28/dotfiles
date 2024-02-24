@@ -2,8 +2,8 @@ filetype plugin indent on
 packadd! matchit
 syntax enable
 
-set autoread
 set autoindent
+set autoread
 set backspace=indent,eol,start
 set backupcopy=yes              " preserves file creation time on macOS
 set display=lastline
@@ -14,28 +14,33 @@ set hidden
 set ignorecase
 set laststatus=2
 set linebreak
+set nojoinspaces
 set nrformats-=octal
+set path=$PWD/**
 set scrolloff=2
 set shiftwidth=2
-set smartcase
 set smartindent
 set softtabstop=2
 set splitright
 set ttimeout
 set ttimeoutlen=100
+set wildignore+=*/node_modules/*
 set wildmode=longest,list,full  " Zsh-style tab completion
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_preview = 1
 let g:netrw_winsize = 30
+let g:rustfmt_autosave = 1
 
-if executable('sourcekit-lsp')
-  au User lsp_setup call lsp#register_server({
-    \ 'name': 'sourcekit-lsp',
-    \ 'cmd': {server_info->['sourcekit-lsp']},
-    \ 'allowlist': ['swift'],
-    \ })
-endif
+" " I commented this out because after updating to Xcode 13.0 (13A233), I
+" " experienced this issue https://developer.apple.com/forums/thread/691415.
+" if executable('sourcekit-lsp')
+"   au User lsp_setup call lsp#register_server({
+"     \ 'name': 'sourcekit-lsp',
+"     \ 'cmd': {server_info->['sourcekit-lsp']},
+"     \ 'allowlist': ['swift'],
+"     \ })
+" endif
 
-command Date r !node -p '(new Date()).toISOString()'
+command Date r !date -u '+<time datetime="\%FT\%TZ">\%b \%-d, \%Y</time>'
