@@ -16,7 +16,6 @@ alias gr='grep --exclude-dir .git --exclude-dir node_modules --recursive'
 alias json='pbpaste | python3 -m json.tool'
 alias lf='ls -1G'
 alias mv='mv -i'
-alias rmds='find . -name .DS_Store -type f -delete'
 
 # Functions
 d2i() { s2i "$(d2s "$1")"; }
@@ -26,6 +25,7 @@ i2s() { date -ju -f '%FT%TZ' "$1" '+%s'; }
 s2d() { date -j -f '%s' "$1"; }
 s2i() { date -ju -f '%s' "$1" '+%FT%TZ'; }
 da() { diff -a "$1" "$2" | less; }
+rms() { find "$1" -name .DS_Store -type f -delete; }
 
 # Vi mode
 bindkey -v

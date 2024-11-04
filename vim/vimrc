@@ -14,6 +14,7 @@ set hidden
 set ignorecase
 set laststatus=2
 set linebreak
+set mouse=a
 set nojoinspaces
 set nrformats-=octal
 set path=$PWD/**
@@ -21,6 +22,7 @@ set scrolloff=2
 set shiftwidth=2
 set smartindent
 set softtabstop=2
+set splitbelow
 set splitright
 set ttimeout
 set ttimeoutlen=100

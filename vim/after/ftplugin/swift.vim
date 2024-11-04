@@ -1,1 +1,2 @@
-setlocal sw=2 sts=2
+setlocal shiftwidth=2
+setlocal softtabstop=2

@@ -1,0 +1,5 @@
+Here are some registers I use:
+
+- "d   T"y10l:!date -u -r ^R"^M
+- "l   S<a href^M%i="^R+" target="_blank"^[<80><fd>a/a>^Ml
+- "u   ?<dt>Updated^M:r !date -u +'<dd><time datetime="\%FT\%TZ">\%b \%-d, \%Y</time></dd>'^M==ddVp^O:up^M

@@ -1,29 +1,29 @@
 # dotfiles
 
-My dotfiles.
+My dotfiles for configuring Git, Vim, and Zsh.
 
 ## Install
 
-1. Clone this project to `~/dotfiles`, or wherever.
+1. Clone this project to `~/projects/dotfiles`, or wherever.
 
-       git clone --depth 1 --recurse-submodules --shallow-submodules --remote-submodules https://github.com/ma11hew28/dotfiles.git ~/dotfiles
+       git clone --depth 1 --recurse-submodules --shallow-submodules --remote-submodules https://github.com/ma11hew28/dotfiles.git ~/projects/dotfiles
 
-2. Change the values of `name` and `email` in `config/git/config`.
-3. Optional: Create a file named `zshrc_private` for any private commands.
-4. Back up these files and directories because step 6 replaces them.
+2. Change directory to your clone of this project.
+
+       cd ~/projects/dotfiles
+
+3. Change the values of `name` and `email` in `config/git/config`.
+4. Optional: Create a file named `zshrc_private` for any private commands.
+5. Back up these files and directories because step 6 replaces them.
    - `~/.config/git/config`
    - `~/.config/git/ignore`
    - `~/.vim`
    - `~/.zshenv`
    - `~/.zshrc`
    - `~/.zshrc_private`
-5. Restart Terminal and change directory to this project.
-
-       cd ~/dotfiles
-
 6. Install dotfiles.
 
-       zsh install.zsh dotfiles
+       zsh install.zsh projects/dotfiles
 
 7. Restart Terminal.
 
@@ -49,24 +49,17 @@ This project uses Git submodules to manage Vim packages.
 
 ## Update
 
-1. Restart Terminal and change directory to this project.
-
-       cd ~/dotfiles
-
+1. Do install step 2.
 2. Update this project.
 
        git pull
 
-2. Update all the Vim packages, as above.
-
-3. Do install steps 5–7.
+3. Update all the Vim packages, as above.
+4. Do install steps 5–7.
 
 ## Uninstall
 
-1. Restart Terminal and change directory to this project.
-
-       cd ~/dotfiles
-
+1. Do install step 2.
 2. Uninstall dotfiles.
 
        zsh uninstall.zsh
@@ -75,4 +68,4 @@ This project uses Git submodules to manage Vim packages.
 4. Optional: Move anything you want to keep out of this project.
 5. Remove this project.
 
-       rm -rf ~/dotfiles
+       rm -rf ~/projects/dotfiles
