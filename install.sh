@@ -1,4 +1,4 @@
-if [[ $# -eq 0 ]]; then
+if [ $# -eq 0 ]; then
   echo 'Usage: zsh install.zsh path/from/home/to/dotfiles'
   exit 1
 fi

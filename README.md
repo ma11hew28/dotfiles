@@ -13,8 +13,8 @@ My dotfiles for configuring Git, Vim, and Zsh.
        cd ~/projects/dotfiles
 
 3. Change the values of `name` and `email` in `config/git/config`.
-4. Optional: Create a file named `zshrc_private` for any private commands.
-5. Back up these files and directories because step 6 replaces them.
+4. Optional: Create a file named `zshrc_private` for your private commands.
+5. Back up these files and directories because the next step replaces them.
    - `~/.config/git/config`
    - `~/.config/git/ignore`
    - `~/.vim`
@@ -23,7 +23,7 @@ My dotfiles for configuring Git, Vim, and Zsh.
    - `~/.zshrc_private`
 6. Install dotfiles.
 
-       zsh install.zsh projects/dotfiles
+       sh install.sh projects/dotfiles
 
 7. Restart Terminal.
 
@@ -62,10 +62,10 @@ This project uses Git submodules to manage Vim packages.
 1. Do install step 2.
 2. Uninstall dotfiles.
 
-       zsh uninstall.zsh
+       sh uninstall.sh
 
 3. Restart Terminal.
-4. Optional: Move anything you want to keep out of this project.
-5. Remove this project.
+4. To keep anything, move it out of `~/projects/dotfiles`.
+5. Remove your clone of this project.
 
        rm -rf ~/projects/dotfiles
